@@ -1,0 +1,146 @@
+body{
+	background-color: #369;
+	margin: 0;
+	padding: 0;
+	font: 12px Tahoma, sans-serif;
+	width: 100%;
+	background-image: url(../img/background.jpg);
+	background-repeat: repeat;
+}
+.wrapper{	
+	width:90%;	
+	margin:20px auto;
+	background-color:white;
+}
+header{
+	overflow: hidden;
+	font-size: 24px;
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+header .left{
+	float: left;
+    width: 15%;		
+}
+header .right{
+	float: left;
+	width: 70%;
+	text-align: center;
+	padding: 0px;
+}
+
+
+.wrapper header div h1 {
+	text-align: center;
+}
+/* chuột cho input*/
+input[type="submit"]{
+    cursor: pointer;
+}
+
+.logout {
+    text-align: right;
+    color: #D13B00;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.content{
+	margin:5% 10%;
+	
+}
+.horizon{
+	overflow: hidden;
+	border-top-width: medium;
+	border-top-style: ridge;
+	border-top-color: #06F;
+}	
+
+.content{
+	overflow:hidden;
+}
+.content .left{
+	float:left;
+    width: 300px;
+	height: 200px;						
+	border:1px dashed #CCC;	
+}
+footer {
+	height: 100px;
+	position: relative;
+}
+.wrapper footer div {
+	text-align: right;
+	position: absolute;
+	left: 475px;
+	top: 67px;
+	font-style: italic;
+}
+/* table */
+table.pretty {
+    width: 100%;
+    clear: both;
+}     
+table.pretty td,
+table.pretty th {
+    padding: 5px;
+    border: 1px solid white;
+}
+/* Header cells */
+table.pretty thead th {
+    text-align: center;
+    font-size: 14px;
+    text-transform:uppercase;
+    color:red;      
+}
+/* Body cells */
+table.pretty tbody th {
+    text-align: left;
+    background: #91c5d4;
+}
+     
+table.pretty tbody td {
+    text-align: center;
+    font-size:12px;
+    background: #d5eaf0;
+}
+         
+table.pretty tbody tr.odd td {
+    background: #bcd9e1;
+}
+
+div.dataTables_wrapper {
+    background-color:  	#20B2AA;
+}
+a.paginate_button,
+a.paginate_active {
+    display: inline-block;
+    background-color: #608995;
+    padding: 2px 6px;
+    margin-left: 2px;        
+}
+ 
+a.paginate_active {
+    background-color: transparent;
+    border: 1px solid black;
+}
+ 
+a.paginate_button_disabled {
+    color: #3d6672;
+}
+.paging_full_numbers a:active {
+    outline: none
+}
+.paging_full_numbers a:hover {
+    text-decoration: none;
+}
+ 
+div.dataTables_paginate span>a {
+    width: 15px;
+    text-align: center;
+}
+ 
+div.dataTables_info {
+    padding: 9px 6px 6px 6px;
+}    

@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Chuyển số sang chữ</title>
+<script src="../jquery/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<?php if(isset($_word)) echo $_word; ?>
+
+<form action="" method="post" id="frm_num">
+    <input type="text" name="txt_num" id="txt_num"/>
+    <label for="txt_num" id="formatNum"></label>
+    <input type="submit" value="submit" id="btt" name="btt"/>
+</form>
+
+<script>
+$(document).ready(function(){
+    $("#txt_num").keyup(function(){          
+        $.ajax({
+            type: 'POST',
+            url: 'index.php',
+            data: { txt_num : $("#txt_num").val() },
+            success: function(data) {
+                $("#formatNum").text(data);
+            }
+        });           
+    });    
+    
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Danh sách các nghị quyết</title>
+    <script src="../jquery/jquery-1.10.1.min.js"></script>        
+    <script src="../jquery/jquery.dataTables.js"></script>
+    <script src="../jquery/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../jquery/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="../jquery/redmond/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>    
+    <style type="text/css">
+
+.frm_wrapper {
+width: 500px;
+}
+.frm_wrapper div {
+float: left;
+width: 400px;
+padding: 0 0 0.75em 0;
+}
+.frm_wrapper label {
+float: left;
+width: 120px;
+}
+.frm_wrapper textarea, .frm_wrapper input {
+float: right;
+width: 260px;
+}
+
+.frm_wrapper input[type="submit"] {
+float: none;
+width: auto;
+text-align: right;
+}
+
+    </style>        
+</head>
+
+<body>
+
+<div class="wrapper">
+<header>
+	<div class="left"><img src="../img/VINASUN.gif" width="201" height="200" alt="logoVinasun"></div>
+  	<div class="right">
+  	  <div>CÔNG TY CỔ PHẨN ÁNH DƯƠNG VIỆT NAM </div>
+  	  <div>Vinasun Corporation</div>
+	  <h1>ĐẠI HỘI CỔ ĐÔNG</h1>
+      <div class="logout">
+Notice: Undefined variable: username in C:\xampp\htdocs\15102013\DanhSachNghiQuyet\DSNghiQuyet.html.php on line 48
+
+Call Stack:
+    0.0029     353968   1. {main}() C:\xampp\htdocs\15102013\DanhSachNghiQuyet\DSNghiQuyet.html.php:0
+
+<a href="?logout"><img src="../img/application_exit.png" width="24" height="24" alt="exit"></a></div>    
+    </div>
+    
+</header>    
+<div class="horizon"></div>
+
+<div class="content">  
+<a href="?homepage">Homepage</a> 
+<h2>DANH SÁCH CÁC NGHỊ QUYẾT</h2>
+       
+<form action="." method="post" enctype="multipart/form-data" id="form_DsNghiQuyet">    
+    <input type="submit" value="Thêm Nghị Quyết"  name="themnghiquyet" id="themnghiquyet"/>    
+    <div  id="form_capnhap">    
+      <h3 id="frm_title"></h3>
+      <div class="frm_wrapper">                 
+        <div>
+            <label for="DBNghiQuyet">Database Nghị quyết</label>
+            <input type="text"   value=""id="frm_DBNghiQuyet" name="DBNghiQuyet" placeholder="NQ1" class="required error"/>
+            <input type="hidden" value=""name="frmDBNghiQuyet" />            
+        </div>        
+        <div>
+            <label for="tenNghiQuyet">Tên Nghị quyết</label>
+            <input type="text" value="" name="tenNghiQuyet" placeholder="Nghị quyết 1" class="required error"/>            
+        </div>
+        
+        <div>
+            <label for="noidungNghiQuyet">Nội dung nghị quyết</label>
+            <textarea name="noidungNghiQuyet" placeholder="có thể để trống"></textarea>
+        </div>        
+        <div>
+            <label for="file">Biểu mẫu nghị quyết</label>
+            <input type="file" name="fileWord" id="file" class="required error"/>
+        </div>
+         
+        <div>
+            <label for="file">Tên biểu mẫu</label>
+            <input type="text" value="" name="tenBieuMau" placeholder="nghiquyet1" class="required error"/>
+            <input type="hidden" value=""name="frmTenBMCu" />
+        </div>
+                <div>
+            <input type="submit" value="Sửa" name="bttFrm" id="btt_SuaThem"/>
+            <input type="submit" value="Cancel" name="bttFrm" id="btt_Cancel"/>
+        </div>        
+      </div>
+    </div>
+</form> 
+<!-- Danh sách các nghị quyết table--!>
+
+<h3>DANH SÁCH CÁC NGHỊ QUYẾT (ADMIN)</h3>
+
+
+</div>
+<footer>
+	<div>Copyright © 2013 by timthoi. Vinasun Corp.</div>
+</footer>
+</div>
+<script>
+$(document).ready(function(){    
+    $("#themnghiquyet").click(function(e){
+        $("#btt_SuaThem").val("Thêm");                
+        $("#form_capnhap").toggle();
+        e.preventDefault();        
+    })    
+    
+    $("#btt_Cancel").click(function(e){        
+        window.location=".";
+    })
+        
+    
+    $("#form_DsNghiQuyet").validate({        
+        messages:{
+            DBNghiQuyet:{
+                required:"Chưa nhập",                
+            },
+            tenNghiQuyet:{
+                required:"Chưa nhập",                
+            },
+            tenBieuMau:{
+                required:"Chưa nhập",                
+            },
+            fileWord:{
+                required:"Chưa nhập",                
+            },
+            descriptionNghiQuyet:{
+                required:"Chưa nhập",                
+            },
+            frmNghiQuyet:{
+                required:"Chưa nhập",                
+            },
+            
+        }
+    });  
+    $("#tbNghiQuyet").dataTable({
+         "bJQueryUI": true
+    });
+});
+</script>
+</body>
+</html>
