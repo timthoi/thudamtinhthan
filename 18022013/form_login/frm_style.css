@@ -1,0 +1,48 @@
+.wrapper {
+	width:400px;
+	padding:0px;
+	background:#fefefe;
+	margin:0 auto;
+	border:1px solid #c4cddb;
+	border-top-color:#d3dbde;
+	border-bottom-color:#bfc9dc;
+	box-shadow:0 1px 1px #ccc;
+	border-radius:5px;
+
+}
+
+h2 {
+	margin:0;
+	padding:10px 0;
+	font-size:24px;
+	text-align:center;
+	background:#eff4f7;
+	border-bottom:1px solid #dde0e7;
+	box-shadow:0 -1px 0 #fff inset;
+	border-radius:5px 5px 0 0; /* otherwise we get some uncut corners with container div */
+	text-shadow:1px 1px 0 #fff;
+}
+
+.u{
+    margin:10px 20px;
+}
+input {
+	padding:10px 10px;
+	border:1px solid #d5d9da;
+	border-radius:5px;
+	box-shadow: 0 0 5px #e8e9eb inset;
+	width:328px; /* 400 (#container) - 40 (li margins) -  10 (span paddings) - 20 (input paddings) - 2 (input borders) */
+	font-size:1em;
+	outline:0; /* remove webkit focus styles */
+}
+input:focus {
+	border:1px solid #b9d4e9;
+	border-top-color:#b6d5ea;
+	border-bottom-color:#b8d4ea;
+	box-shadow:0 0 5px #b9d4e9;
+}
+div#errors{
+    margin:20px 20px;
+    color:red;
+    font-weight: normal;    
+}
